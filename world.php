@@ -11,16 +11,16 @@ $cityLookup = $_GET['cityLookup'];
 
 if($cityLookup=='true'){
   
-  $stmt = $conn->prepare("SELECT c.name as Name, c.district as District, c.population as Population FROM cities c join countries cs on c.country_code = cs.code WHERE cs.name = :country");
-  $stmt->bindParam(':country', $country, PDO::PARAM_STR);
+  $stmt = $conn->prepare("SELECT c.name as Name, c.district as District, c.population as Population FROM cities
+   c join countries cs on c.country_code = cs.code WHERE cs.name LIKE '%$country%'");
   $stmt->execute();
   $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
   echo '<table class="content-table">';;
   echo "<thead>";
     echo "<tr>";
       echo "<th>NAME</th>";
-      echo "<th>District</th>";
-      echo "<th>Population</th>";
+      echo "<th>DISTRICT</th>";
+      echo "<th>POPULATION</th>";
     echo "</tr>";
   echo "</thead>";
   echo "<tbody>";
