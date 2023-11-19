@@ -46,16 +46,29 @@ label{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
  
 #lookup{
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     border: none;
     background-color: #52a0c6;
     padding: 5px;
     border-radius: 5px;
-    width: 11.5%;
+    width: 200px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+}
+#lookup-c{
+    cursor: pointer;
+    font-size: 0.8rem;
+    border: none;
+    background-color: goldenrod;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
     text-transform: uppercase;
     color: white;
     font-weight: bolder;
@@ -63,11 +76,17 @@ label{
 input{
     padding: 10px;
     margin: 10px 0;
-    width: 30%;
+    width: 45%;
     border-radius: 5px;
     border: none;
     height: 30px;
     
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+
 }
 
 .content-table {
